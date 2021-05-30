@@ -12,11 +12,11 @@ int main()
 
     int row;
     char ch;
-    char bukva;
+    char sym;
    
     printf("Введите любую букву:\n");
-    scanf_s("%c", &bukva);
-    char ROWS = bukva - '@';
+    scanf_s("%c", &sym);
+    char ROWS = sym - '@';
 
     for (row = 0; row < ROWS; row++)
     {
@@ -27,24 +27,18 @@ int main()
         }
         for (ch = 'A'; ch <= 'A' + row; ch++)
         {
-            printf("%c", ch);
-           
+            printf("%c", ch);      
         }
-        if (row>0)
+        if (row > 0)
         {
             letter += row - 1;
             for (ch = letter; ch > letter - row; ch--)
             {
                 printf("%c", ch);
-
             }
-        }
-        
-        printf("\n");
-
-        
-    }
-    
+        }    
+        printf("\n");      
+    }   
     return 0;
 }
 
